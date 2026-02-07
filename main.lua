@@ -1,5 +1,5 @@
 -- Load VinzHub Library
-local Library = loadstring(game:HttpGet("https://script.vinzhub.com/library"))()
+local Library = loadstring(game:HttpGet("https://vinzhub.netlify.app/loader"))()
 
 local Window = Library:CreateWindow({
     Title = "Alamak Hub - Fish It OP Delays",
