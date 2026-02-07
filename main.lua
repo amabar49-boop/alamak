@@ -1,6 +1,6 @@
 -- Obsidian UI Loader
 local Obsidian = loadstring(game:HttpGet(
-    "https://raw.githubusercontent.com/deividcomsono/Obsidian/main/Obsidian.lua"
+    "https://raw.githubusercontent.com/deividcomsono/Obsidian/main"
 ))()
 
 local Window = Obsidian:CreateWindow({
