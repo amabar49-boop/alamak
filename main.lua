@@ -1,22 +1,36 @@
-getgenv().OBSIDIAN_PARENT = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
+-- Load VinzHub Library
+local Library = loadstring(game:HttpGet("https://script.vinzhub.com/library"))()
 
-local Obsidian = loadstring(game:HttpGet(
-    "https://raw.githubusercontent.com/deividcomsono/Obsidian/main/Library.lua"
-))()
-
-local Window = Obsidian:CreateWindow({
-    Title = "ALAMAK HUB",
-    Footer = "by amabar49-boop",
-    Theme = "Dark",
-    Size = UDim2.fromOffset(520, 360)
+-- Create Window
+local Window = Library:CreateWindow({
+    Title = "Alamak Hub",
+    Center = true,
+    AutoShow = true
 })
 
-local MainTab = Window:AddTab({
-    Title = "Main"
-})
+-- Create Tab
+local MainTab = Window:AddTab("Main")
 
-loadstring(game:HttpGet(
-    "https://raw.githubusercontent.com/amabar49-boop/alamak/main/features.lua"
-))()(MainTab)
+-- Create Section
+local MainSection = MainTab:AddSection("Basic Features")
 
-Obsidia
+-- Toggle Example
+MainSection:AddToggle("Hello Toggle", {
+    Text = "Print Hello",
+    Default = false
+}):OnChanged(function(Value)
+    if Value then
+        print("Hello from Alamak Hub!")
+    else
+        print("Toggle Off")
+    end
+end)
+
+-- Button Example
+MainSection:AddButton("Test Button", function()
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Alamak Hub",
+        Text = "Button clicked!",
+        Duration = 3
+    })
+end)
