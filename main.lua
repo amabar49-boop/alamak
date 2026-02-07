@@ -1,4 +1,3 @@
--- Force Obsidian to PlayerGui
 getgenv().OBSIDIAN_PARENT = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
 
 local Obsidian = loadstring(game:HttpGet(
@@ -20,4 +19,4 @@ loadstring(game:HttpGet(
     "https://raw.githubusercontent.com/amabar49-boop/alamak/main/features.lua"
 ))()(MainTab)
 
-Obsidian:Init()
+Obsidia
